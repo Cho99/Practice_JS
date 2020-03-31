@@ -1,0 +1,80 @@
+*{margin: 0; padding: 0}
+
+:root {
+	font-size: 16px;
+	font-family: 'Luckiest Guy', cursive;
+	--text-primary:;
+	--text-secondary:;
+	--bg-primary: #7777d2;
+	--bg-secondary: #141418;
+	--transition-speed: 600ms;
+}
+
+body {
+	color: black;
+	background-color: white;
+}
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #6649b8;
+}
+
+a {
+	text-decoration: none;
+	color: var();
+}
+
+.main {
+	margin-left: 5rem;
+	padding: 1rem;
+	line-height: 1.5rem;
+}
+
+/*navbar*/
+.navbar {
+	position: fixed;
+	width: 5rem;
+	height: 100vh;
+	background-color: var(--bg-primary);
+	transition: width 200ms ease;
+}
+
+.navbar:hover {
+	width: 16rem;
+}
+
+
+.navbar:hover .link-text{
+	display: block;
+	display: inline;
+}
+
+.navbar-nav {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.nav-item {
+	width: 100%;
+}
+
+.nav-item:last-child {
+	margin-top: auto;
+}
+
+.link-text {
+	display: none;
+	margin-left: 0.75rem;
+}
+/*end-navbar*/
