@@ -1,4 +1,4 @@
-var url = "https://www.instagram.com/_mangokhongphaixoainhe/";
+var url = "https://www.tentaclearmada.com/2015/08/matsuri-tougetsu-from-comic-aun-nsfw/";
 
 const puppeteer = require('puppeteer');
 const fs = require('fs');
@@ -16,8 +16,8 @@ async function getImagesFromPage(url) {
 	await page.goto(url);
 
 	const imageSrcSets = await page.evaluate(() => {
-		const imgs = Array.from(document.querySelectorAll('article img'));
-		const srcSetAttribute = imgs.map(i => i.getAttribute('srcset'));
+		const imgs = Array.from(document.querySelectorAll('entry-content img'));
+		const srcSetAttribute = imgs.map(i => i.getAttribute('src'));
 		return srcSetAttribute;
 	})
 	const imgUrls = imageSrcSets.map(srcSet => getLargeImageFromSrcSet(srcSet));
